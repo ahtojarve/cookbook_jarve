@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* BASIC */
+body {
+    background-color: #C4DFE6;
+}
+
+main {
+    margin: 20px 24px;
+}
+
+section {
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 500;
+    font-size: 50px;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h2, h3, h4 {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 2px;
+    color: black;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h4 {
+    font-style: italic;
+    font-weight: 300;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+img {
+    width:100%;
+}
+
+hr {
+    width: 75%;
+    margin:auto;
+    color: black;
+    background-color: black;
+    border: none;
+    height: 2px;
+}
+
+/* HEADER */
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    width:100%;
+}
+
+nav ul li a, h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;   
+}
+
+header .banner {
+    overflow: hidden;
+    height: 165px;
+}
+
+/* MAIN */
+
+.staff-img {
+    display: none;
+}
+
+.recipes {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.recipes img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    opacity: 0.3;
+}
+
+.recipe-image {
+    position:relative;
+    text-align:center;
+    margin: 10px;
+}
+
+.recipe-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 175px;
+}
+
+#pasta img {
+    object-fit: cover;
+    object-position: right;
+}
+
+/* FOOTER */
+
+footer {
+    display:flex;
+    padding: 16px;
+    /* background-color: rgb(224, 223, 223); */
+    background-color: #66A5AD;
+}
+
+.footer-info {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-info p, a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.footer-info div {
+    display: flex;
+}
+
+.footer-info a {
+    padding-left: 4px;
+    text-decoration: none;
+}
+
+.footer-sm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.footer-sm img {
+    width: 32px;
+    /* margin-bottom: 10px; */
+}
+
+.footer-sm img:last-child {
+    margin-top: 10px;
+}
+
+/* DESKTOP WITH MINIMUM WIDTH 950PX */
+
+@media only screen and (min-width: 950px) {
+    h1 {
+        font-size: 60px;
+        margin-bottom: 16px;
+    }
+    
+    h2 {
+        display: none;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+
+    nav ul li a, h3 {
+        font-size: 24px;  
+    }
+
+    hr {
+        display: none;
+    }
+
+    header .banner {
+        height: 300px;
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+
+    .staff {
+        display: flex;
+        margin-bottom: 48px;
+        margin-right: 64px;
+        margin-left: 64px;
+    }
+
+    .staff-header {
+        margin-top: 48px;
+        margin-left: 64px;
+    }
+
+    .staff-desc {
+        width: 100%;
+        margin-right: 32px;
+    }
+
+    .staff-img {
+        display: inline;
+        width: 100%;
+        margin-left: 32px;
+    }
+    
+    .staff-img img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .recipes {
+        justify-content: space-evenly;
+        margin: 48px 0px;
+    }
+    
+    .recipes img {
+        height: 250px;
+        width: 250px;
+    }
+    
+    .recipe-image img {
+        opacity: 1;
+    }
+    
+    .recipe-image:hover img {
+        opacity: 0.5;
+    }
+    
+    .recipe-header {
+        display: none;
+    }
+    
+    .recipe-image:hover h3 {
+        display: block;
+    }
+    
+    footer {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+} 
